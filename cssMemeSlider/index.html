@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mem CSS Slider</title>
+    <title>CSS Meme Slider</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./icons8-meme-32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,45 +13,41 @@
 </head>
 <body>
     <div class="main-container">
-        <div>
-            <div class="slider">
-                <div class="slider-items">
-                    <input type="radio" name="rbtn" id="r1" checked>
-                    <input type="radio" name="rbtn" id="r2">
-                    <input type="radio" name="rbtn" id="r3">
-                    <input type="radio" name="rbtn" id="r4">
-                    <input type="radio" name="rbtn" id="r5">
+        <div class="slider">            
+            <div class="slider-items">
+                <input type="radio" name="rbtn" id="r1" checked>
+                <input type="radio" name="rbtn" id="r2">
+                <input type="radio" name="rbtn" id="r3">
+                <input type="radio" name="rbtn" id="r4">
+                <input type="radio" name="rbtn" id="r5">
 
-                    <div class="item slide1">
-                        <img src="./animalmemes-17_r.jpg" alt="img1" class="img1-orig">
-                    </div>
-                    <div class="item">
-                        <img src="./animalmemes-7_r.jpg" alt="img2" class="img2-orig">
-                    </div>
-                    <div class="item">
-                        <img src="./animalmemes-10_r.jpg" alt="img3" class="img3-orig">
-                    </div>
-                    <div class="item">
-                        <img src="./animalmemes-19_r.jpg" alt="img4" class="img4-orig">
-                    </div>            
-                    <div class="item">
-                        <img src="./animalmemes-25_r.jpg" alt="img5" class="img4-orig">
-                    </div>
-
-                    <span class="mem-label" id="lbl1">When was the last time they blinked?</span>
-                    <span class="mem-label" id="lbl2">Is this good enough for Instagram?</span>
-                    <span class="mem-label" id="lbl3">They didn’t say what shape</span>
-                    <span class="mem-label" id="lbl4">A familiar pain</span>       
-                    <span class="mem-label" id="lbl5">Just five more minutes</span>
-
+                <div class="item">
+                    <img src="./animalmemes-25_r.jpg" alt="img1" class="slide-image">
                 </div>
-                <div class="slider-nav">
-                    <label for="r1" class="slider-nav-item" id="dot1"></label>
-                    <label for="r2" class="slider-nav-item" id="dot2"></label>
-                    <label for="r3" class="slider-nav-item" id="dot3"></label>
-                    <label for="r4" class="slider-nav-item" id="dot4"></label>
-                    <label for="r5" class="slider-nav-item" id="dot5"></label>
+                <div class="item slide1">
+                    <img src="./animalmemes-17_r.jpg" alt="img2" class="slide-image">
                 </div>
+                <div class="item">
+                    <img src="./animalmemes-7_r.jpg" alt="img3" class="slide-image">
+                </div>
+                <div class="item">
+                    <img src="./animalmemes-10_r.jpg" alt="img4" class="slide-image">
+                </div>
+                <div class="item">
+                    <img src="./animalmemes-19_r.jpg" alt="img5" class="slide-image">
+                </div>            
+                
+                <label for="r1" class="slider-nav-item" id="dot1"></label>
+                <label for="r2" class="slider-nav-item" id="dot2"></label>
+                <label for="r3" class="slider-nav-item" id="dot3"></label>
+                <label for="r4" class="slider-nav-item" id="dot4"></label>
+                <label for="r5" class="slider-nav-item" id="dot5"></label>
+                        
+                <span class="mem-label" id="lbl1">Just five more minutes</span>
+                <span class="mem-label" id="lbl2">When was the last time they blinked?</span>
+                <span class="mem-label" id="lbl3">Is this good enough for Instagram?</span>
+                <span class="mem-label" id="lbl4">They didn't say what shape</span>
+                <span class="mem-label" id="lbl5">A familiar pain</span>
             </div>
         </div>
     </div>
