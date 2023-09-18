@@ -11,12 +11,9 @@ body {
 }
 .main-container {
     display: flex;
-    flex-direction: column;    
     justify-content: center;
-    align-items: center;
-    max-width: 1100px;
+    max-width: 1000px;
     height: 740px;
-    min-height: 660px;
     position: relative;   
     margin: auto;
     background-color: #444844e4;
@@ -24,18 +21,13 @@ body {
     border-radius: 5px;
 }
 .slider {
-    margin-top: 20px;
-    position: relative;
+    width: 600px;
+    height: 600px;
+    margin-top: 10px;    
     overflow: hidden;
-    max-width: 600px;
-    height: 650px;
-    /* border: 10px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 5 15 25 rgba(0, 0, 0, 0.3); */
-    /* background-color: #444844e4; */
 }
-.slider-items {    
-    display: flex;
+.slider-items {
+    overflow: hidden;
     width: 500%;
     height: 100%;
     display: -webkit-flex;
@@ -43,39 +35,23 @@ body {
     display: -ms-flex;
     display: -o-flex;
 }
-.slider-items .item {
+
+.item {
     width: 20%;
     transition: 1s;
 }
-.slider-items .item img {
+.item img {
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 .slider-items input {
     position: absolute;
     visibility: hidden;
 }
 .slider-nav-item {
-    position: absolute;
-    bottom: 10px;
-}
-#dot1 {
-left: 70%;
-}
-#dot2 {
-left: 75%;
-}
-#dot3 {
-left: 80%;
-}
-#dot4 {
-left: 85%;
-}
-#dot5 {
-left: 90%;
-}
-
-.slider-nav-item {
+    position: absolute;    
+    top: 660px;
     width: 20px;
     height: 20px;
     background: #4e85ecd9;
@@ -87,28 +63,39 @@ left: 90%;
 }
 .slider-nav-item:hover {
     background: #fff;
-    /* opacity: 0.3; */
+}
+#dot1 {
+left: 63%;
+}
+#dot2 {
+left: 66%;
+}
+#dot3 {
+left: 69%;
+}
+#dot4 {
+left: 72%;
+}
+#dot5 {
+left: 75%;
 }
 
 .mem-label {
-    visibility: hidden;  
-    /* display: inline;
-    display: flex;  */
-    /* margin-top: 20px;
-    margin-left: 10px; */
+    visibility: hidden;
     max-width: 360px;
     height: 24px;
     color: #fff;
     text-align: left;
     font-family: Inter;
-    font-size: 18px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 200;
     line-height: normal;
     position: absolute;
-    /* left: 10px; */
-    top: 620px;
+    top: 663px;
+    transition: visibility .01s ease;
 }
+
 /* =====Radio1======== */
 #r1:checked ~ .slide1 {
     margin-left: 0;
@@ -185,73 +172,75 @@ left: 90%;
     visibility: visible;
 }
 /* ==== adaptive view ==== */
-/* .slider {
-   height: auto;
-} */
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1128px) {
     .main-container {
-        /* max-width: 640px; */
-        height: auto  
-    }
-    .slider {
         max-width: 680px;
-        height: 780px;
+        height: 600px;
+        margin-top: 0;
     }
-    #dot1,#dot2,#dot3,#dot4,#dot5 {
-        top: 620px;
-    }
-    #dot1 {
-        left: 37%;
-    }
-    #dot2 {
-        left: 44%;
-    }
-    #dot3 {
-        left: 51%;
-    }
-    #dot4 {
-        left: 58%;
-    }
-    #dot5 {
-        left: 65%;
-    }
-    .mem-label {
-        top: 660px;
-    }
-}
-
-@media screen and (max-width: 740px) {
     .slider {
-        /* margin-top: 40px; */
-        width: 400px;
-        height: 400px;
-        /* overflow: hidden; */
-        /* border: 5px solid #fff; */        ;
-        /* display: flex; */
+        width: 500px;
+        height: 500px;
     }
     .slide-image {
         width: 100%;
     }
     #dot1,#dot2,#dot3,#dot4,#dot5 {
-        top: 640px;
-    }
-    #dot1 {
-        left: 30%;
-    }
-    #dot2 {
-        left: 41%;
-    }
-    #dot3 {
-        left: 52%;
-    }
-    #dot4 {
-        left: 63%;
-    }
-    #dot5 {
-        left: 71%;
+        position: absolute;
+        top: 540px;
     }
     .mem-label {
-        top: 520px;
+        top: 545px;
+        font-size: 18px;
+    } 
+    #dot1 {
+        left: 63%;
+        }
+        #dot2 {
+        left: 68%;
+        }
+        #dot3 {
+        left: 73%;
+        }
+        #dot4 {
+        left: 78%;
+        }
+        #dot5 {
+        left: 83%;
+        }
+}
+@media screen and (max-width: 768px) {
+    .main-container {
+        max-width: 500px;
+        height: 540px;
+    }
+    .slider {
+        max-width: 400px;
+        height: 400px;
+    }
+    .slide-image {
+        width: 100%;
+    }
+    #dot1,#dot2,#dot3,#dot4,#dot5 {
+        top: 430px;
+    }
+    #dot1 {
+        left: 180px;
+    }
+    #dot2 {
+        left: 210px;
+    }
+    #dot3 {
+        left: 240px;
+    }
+    #dot4 {
+        left: 270px;
+    }
+    #dot5 {
+        left: 300px;
+    }
+    .mem-label {
+        top: 480px;
         font-size: 18px;
     }
 }
