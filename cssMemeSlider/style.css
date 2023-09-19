@@ -1,0 +1,246 @@
+* {
+margin: 0;
+padding: 0;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+body {
+  background-color: #fff;      
+  justify-content: center;
+}
+.main-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    height: 740px;
+    position: relative;   
+    margin: auto;
+    background-color: #444844e4;
+    border: 10px solid #ddd;
+    border-radius: 5px;
+}
+.slider {
+    width: 600px;
+    height: 600px;
+    margin-top: 10px;    
+    overflow: hidden;
+}
+.slider-items {
+    overflow: hidden;
+    width: 500%;
+    height: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+}
+
+.item {
+    width: 20%;
+    transition: 1s;
+}
+.item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.slider-items input {
+    position: absolute;
+    visibility: hidden;
+}
+.slider-nav-item {
+    position: absolute;    
+    top: 660px;
+    width: 20px;
+    height: 20px;
+    background: #4e85ecd9;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.3s ease-in-out; 
+}
+.slider-nav-item:hover {
+    background: #fff;
+}
+#dot1 {
+left: 63%;
+}
+#dot2 {
+left: 66%;
+}
+#dot3 {
+left: 69%;
+}
+#dot4 {
+left: 72%;
+}
+#dot5 {
+left: 75%;
+}
+
+.mem-label {
+    opacity: 0;
+    max-width: 360px;
+    height: 24px;
+    color: #fff;
+    text-align: left;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    position: absolute;
+    top: 663px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* =====Radio1======== */
+#r1:checked ~ .slide1 {
+    margin-left: 0;
+}
+#r1:checked ~ #dot1 {
+    border: solid #4e85ecd9 3px;
+    background: inherit;
+}
+#r1:checked ~ #dot1:hover {
+    border: solid #fff 3px;
+    background: inherit;
+}
+#r1:checked  ~ #lbl1 {
+    opacity: 1;
+}
+/* =====Radio2======== */
+#r2:checked ~ .slide1 {
+    margin-left: -20%;
+}
+#r2:checked ~ #dot2 {
+    border: solid #4e85ecd9 3px;
+    background: inherit;
+}
+#r2:checked ~ #dot2:hover {
+    border: solid #fff 3px;
+    background: inherit;
+}
+#r2:checked  ~ #lbl2 {
+    opacity: 1;
+}
+/* =====Radio3======== */
+#r3:checked ~ .slide1 {
+    margin-left: -40%;
+}
+#r3:checked ~ #dot3 {
+    border: solid #4e85ecd9 3px;
+    background: inherit;
+}
+#r3:checked ~ #dot3:hover {
+    border: solid #fff 3px;
+    background: inherit;
+}
+#r3:checked  ~ #lbl3 {
+    opacity: 1;
+}
+/* =====Radio4======== */
+#r4:checked ~ .slide1 {
+    margin-left: -60%;
+}
+#r4:checked ~ #dot4 {
+    border: solid #4e85ecd9 3px;
+    background: inherit;
+}
+#r4:checked ~ #dot4:hover {
+    border: solid #fff 3px;
+    background: inherit;
+}
+#r4:checked ~ #lbl4 {
+    opacity: 1;
+}
+/* =====Radio5======== */
+#r5:checked ~ .slide1 {
+    margin-left: -80%;
+}
+#r5:checked ~ #dot5 {
+    border: solid #4e85ecd9 3px;
+    background: inherit;
+}
+#r5:checked ~ #dot5:hover {
+    border: solid #fff 3px;
+    background: inherit;
+}
+#r5:checked ~ #lbl5 {
+    opacity: 1;
+}
+/* ==== adaptive view ==== */
+@media screen and (max-width: 1128px) {
+    .main-container {
+        max-width: 680px;
+        height: 600px;
+        margin-top: 0;
+    }
+    .slider {
+        width: 500px;
+        height: 500px;
+    }
+    .slide-image {
+        width: 100%;
+    }
+    #dot1,#dot2,#dot3,#dot4,#dot5 {
+        position: absolute;
+        top: 540px;
+    }
+    .mem-label {
+        top: 545px;
+        font-size: 18px;
+    } 
+    #dot1 {
+        left: 63%;
+        }
+        #dot2 {
+        left: 68%;
+        }
+        #dot3 {
+        left: 73%;
+        }
+        #dot4 {
+        left: 78%;
+        }
+        #dot5 {
+        left: 83%;
+        }
+}
+@media screen and (max-width: 768px) {
+    .main-container {
+        max-width: 500px;
+        height: 540px;
+    }
+    .slider {
+        max-width: 400px;
+        height: 400px;
+    }
+    .slide-image {
+        width: 100%;
+    }
+    #dot1,#dot2,#dot3,#dot4,#dot5 {
+        top: 430px;
+    }
+    #dot1 {
+        left: 180px;
+    }
+    #dot2 {
+        left: 210px;
+    }
+    #dot3 {
+        left: 240px;
+    }
+    #dot4 {
+        left: 270px;
+    }
+    #dot5 {
+        left: 300px;
+    }
+    .mem-label {
+        top: 480px;
+        font-size: 18px;
+    }
+}
