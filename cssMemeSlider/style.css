@@ -59,7 +59,7 @@ body {
     border-radius: 50%;
     cursor: pointer;
     -webkit-transition: all 0.5s ease;
-    transition: all 0.8s ease;  
+    transition: all 0.3s ease-in-out; 
 }
 .slider-nav-item:hover {
     background: #fff;
@@ -81,7 +81,7 @@ left: 75%;
 }
 
 .mem-label {
-    visibility: hidden;
+    opacity: 0;
     max-width: 360px;
     height: 24px;
     color: #fff;
@@ -93,7 +93,7 @@ left: 75%;
     line-height: normal;
     position: absolute;
     top: 663px;
-    transition: visibility .01s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 /* =====Radio1======== */
@@ -109,7 +109,7 @@ left: 75%;
     background: inherit;
 }
 #r1:checked  ~ #lbl1 {
-    visibility: visible;
+    opacity: 1;
 }
 /* =====Radio2======== */
 #r2:checked ~ .slide1 {
@@ -124,7 +124,7 @@ left: 75%;
     background: inherit;
 }
 #r2:checked  ~ #lbl2 {
-    visibility: visible;
+    opacity: 1;
 }
 /* =====Radio3======== */
 #r3:checked ~ .slide1 {
@@ -139,7 +139,7 @@ left: 75%;
     background: inherit;
 }
 #r3:checked  ~ #lbl3 {
-    visibility: visible;
+    opacity: 1;
 }
 /* =====Radio4======== */
 #r4:checked ~ .slide1 {
@@ -154,7 +154,7 @@ left: 75%;
     background: inherit;
 }
 #r4:checked ~ #lbl4 {
-    visibility: visible;
+    opacity: 1;
 }
 /* =====Radio5======== */
 #r5:checked ~ .slide1 {
@@ -169,7 +169,7 @@ left: 75%;
     background: inherit;
 }
 #r5:checked ~ #lbl5 {
-    visibility: visible;
+    opacity: 1;
 }
 /* ==== adaptive view ==== */
 @media screen and (max-width: 1128px) {
